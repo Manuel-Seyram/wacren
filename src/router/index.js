@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ServicesView from "../views/ServicesView.vue";
-import AboutUsView from "@/views/AboutUsView.vue";
+import ContactUsView from "../views/ContactUsView.vue";
+import RfcView from "../views/RfcView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,9 +18,14 @@ const router = createRouter({
       component: ServicesView,
     },
     {
-      path: "/about-us",
-      name: "about-us",
-      component: AboutUsView,
+      path: "/contact-us",
+      name: "contact-us",
+      component: ContactUsView,
+    },
+    {
+      path: "/rfc-2350",
+      name: "rfc-2350",
+      component: RfcView,
     },
   ],
 });

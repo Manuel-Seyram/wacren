@@ -1,13 +1,40 @@
 <script setup>
-import { ref } from "vue";
-let open = ref(false);
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
+let open = ref(false);
+const tab = ref(false);
+const tabSecond = ref(false);
+
+const clickedTab = () => {
+  tab.value = !tab.value;
+  tabSecond.value = false;
+};
+const clickedtabSecond = () => {
+  tabSecond.value = !tabSecond.value;
+  tab.value = false;
+};
 function Menu() {
   open.value = !open.value;
 }
+
+const handleClickOutside = (event) => {
+  if (!event.target.closest(".dropdown")) {
+    tab.value = false;
+    tabSecond.value = false;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
 </script>
+
 <template>
-  <div class="mx-auto">
+  <div class="mx-auto relative">
     <header
       class="bg-white text-black py-3.5 px-6 xl:px-0 xl:flex justify-between items-center xl:w-1/2 w-full z-10 mx-auto"
     >
@@ -46,14 +73,63 @@ function Menu() {
             >
           </li>
         </router-link>
-        <li class="mb-3 mx-5">
-          <a
-            href="/about-us"
-            class="text-blue-600 hover:text-blue-800 font-nunito"
-            active-class="active"
-            >About Us</a
+
+        <div class="dropdown relative">
+          <li @click="clickedTab" class="mb-3 mx-5 cursor-pointer">
+            <a
+              class="text-blue-600 hover:text-blue-800 font-nunito"
+              active-class="active"
+              >News <i class="bi bi-caret-down-fill"></i
+            ></a>
+          </li>
+          <div
+            v-show="tab"
+            class="border h-10 w-24 xl:absolute mx-5 xl:mx-0 bg-white"
           >
-        </li>
+            <router-link to="#">
+              <li class="mx-4 mt-1">
+                <a
+                  class="text-blue-600 hover:text-blue-800 font-nunito"
+                  active-class="active"
+                  >Articles</a
+                >
+              </li>
+            </router-link>
+          </div>
+        </div>
+
+        <div class="dropdown relative">
+          <li @click="clickedtabSecond" class="mb-3 mx-5 cursor-pointer">
+            <a
+              class="text-blue-600 hover:text-blue-800 font-nunito"
+              active-class="active"
+              >About Us<i class="bi bi-caret-down-fill"></i
+            ></a>
+          </li>
+          <div
+            v-show="tabSecond"
+            class="border h-16 w-32 xl:absolute mx-5 xl:mx-0 bg-white"
+          >
+            <router-link to="/rfc-2350">
+              <li class="mx-4 mt-1">
+                <a
+                  class="text-blue-600 hover:text-blue-800 font-nunito"
+                  active-class="active"
+                  >RFC2350
+                </a>
+              </li>
+            </router-link>
+            <router-link to="/contact-us">
+              <li class="mx-4 mt-1">
+                <a
+                  class="text-blue-600 hover:text-blue-800 font-nunito"
+                  active-class="active"
+                  >Contact Us</a
+                >
+              </li>
+            </router-link>
+          </div>
+        </div>
       </ul>
     </header>
   </div>
