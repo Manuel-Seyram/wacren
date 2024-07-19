@@ -6,7 +6,7 @@
         159F 9CB0 8AA7 EBA9 457B 2A71 D86D 6F23 812E 0297
       </p>
     </div>
-    <div class="xl:flex gap-10">
+    <div>
       <div>
         <h1 class="mt-2 font-nunito font-bold text-2xl">About Us</h1>
         <h1
@@ -283,33 +283,6 @@
             Chief Executive Officer<br class="mb-3" />
             13/05/2024
           </p>
-        </div>
-      </div>
-      <!--MINI-CONTACT US-->
-      <div class="min-w-fit">
-        <div class="border h-12">
-          <div class="flex justify-around py-3 text-center">
-            <p class="font-nunito font-bold">Contact Us:</p>
-            <router-link to="mailto:cert@wacren.net"
-              ><p class="underline text-blue-600">
-                <span><i class="bi bi-envelope-at text-black"></i></span>
-                cert@wacren.net
-              </p></router-link
-            >
-          </div>
-        </div>
-        <div class="border h-10 mt-7">
-          <div class="flex justify-around py-2 text-center">
-            <p class="font-nunito font-bold">CSIRT:</p>
-            <p class="underline text-blue-600">0xD86D6F23812E0297</p>
-          </div>
-        </div>
-        <div class="border h-24 mt-7">
-          <div class="flex gap-2 py-7 px-2">
-            <img src="../assets/tba.png" alt="tba" class="h-10" />
-            <img src="../assets/first.png" alt="first" class="h-10" />
-            <img src="../assets/opencsirt.png" alt="opencsirt" class="h-10" />
-          </div>
         </div>
       </div>
     </div>
