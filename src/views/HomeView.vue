@@ -18,11 +18,11 @@ import TheContentContainer from "@/components/shared/TheContentContainer.vue";
       <div class="border mt-5 xl:h-20 rounded-md">
         <div class="xl:flex justify-around py-5 text-center">
           <p class="font-nunito font-bold">Contact Us:</p>
-          <router-link to="mailto:cert@wacren.net"
+          <a href="mailto:cert@wacren.net"
             ><p class="underline text-blue-600">
               <span><i class="bi bi-envelope-at text-black"></i></span>
               cert@wacren.net
-            </p></router-link
+            </p></a
           >
           <p class="underline text-blue-600">0xD86D6F23812E0297</p>
         </div>
@@ -30,7 +30,6 @@ import TheContentContainer from "@/components/shared/TheContentContainer.vue";
       <div class="border mt-5 h-24 grid place-items-center rounded-md">
         <div class="flex xl:gap-20 gap-2">
           <img src="../assets/tba.png" alt="tba" class="xl:h-20 h-8" />
-          <img src="../assets/first.png" alt="first" class="xl:h-20 h-8" />
           <img
             src="../assets/opencsirt.png"
             alt="opencsirt"

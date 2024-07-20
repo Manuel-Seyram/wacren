@@ -1,5 +1,4 @@
-<script setup>
-</script>
+<script setup></script>
 <template>
   <main class="xl:w-1/2 px-2 xl:px-0 mx-auto">
     <div class="xl:h-12 px-5 xl:px-0 text-center">
@@ -21,11 +20,13 @@
             contacting the CSIRT is via e-mail.
           </p>
           <label class="font-nunito text-base" for="email">E-mail:</label>
-          <p
-            class="underline mb-5 mt-2 font-nunito text-base pl-5 text-blue-600"
+          <a href="mailto:cert@wacren.net"
+            ><p
+              class="underline mb-5 mt-2 font-nunito text-base pl-5 text-blue-600"
+            >
+              cert@wacren.net
+            </p></a
           >
-            cert@wacren.net
-          </p>
           <label class="font-nunito text-base" for="email">PGP KeyID:</label>
           <p
             class="underline mb-5 mt-2 font-nunito text-base pl-5 text-blue-600"
@@ -52,11 +53,11 @@
         <div class="border h-12">
           <div class="flex justify-around py-3 text-center">
             <p class="font-nunito font-bold">Contact Us:</p>
-            <router-link to="mailto:cert@wacren.net"
+            <a href="mailto:cert@wacren.net"
               ><p class="underline text-blue-600">
                 <span><i class="bi bi-envelope-at text-black"></i></span>
                 cert@wacren.net
-              </p></router-link
+              </p></a
             >
           </div>
         </div>
@@ -67,9 +68,8 @@
           </div>
         </div>
         <div class="border h-24 mt-7">
-          <div class="flex gap-2 py-7 px-2">
+          <div class="flex gap-7 py-7 px-7">
             <img src="../assets/tba.png" alt="tba" class="h-10" />
-            <img src="../assets/first.png" alt="first" class="h-10" />
             <img src="../assets/opencsirt.png" alt="opencsirt" class="h-10" />
           </div>
         </div>

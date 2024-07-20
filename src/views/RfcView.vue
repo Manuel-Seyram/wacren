@@ -87,9 +87,11 @@
             <p class="mb-5 mt-2 font-nunito text-base">
               Please send incident reports which relate to the WACREN network to
               :
-              <span class="underline text-blue-600 cursor-pointer"
-                >csirt@wacren.net</span
-              >
+              <a href="mailto:cert@wacren.net">
+                <span class="underline text-blue-600 cursor-pointer"
+                  >csirt@wacren.net</span
+                >
+              </a>
             </p>
           </div>
           <div>
@@ -145,7 +147,11 @@
             </p>
             <p class="mb-5 mt-2 font-nunito text-base">
               • For security incidents to
-              <span class="underline text-blue-600"> cert@wacren.net</span>
+              <a href="mailto:cert@wacren.net">
+                <span class="underline text-blue-600 cursor-pointer"
+                  >csirt@wacren.net</span
+                >
+              </a>
             </p>
           </div>
           <p class="font-nunito text-xl font-bold mb-5">3. Charter</p>
