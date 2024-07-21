@@ -12,9 +12,11 @@
           />
         </div>
         <div class="mt-5">
-          <p class="font-nunito text-lg underline">
-            WACREN<span class="no-underline"> © 2024</span>
-          </p>
+          <a href="https://wacren.net/en/"
+            ><p class="font-nunito text-lg underline">
+              WACREN<span class="no-underline"> © 2024</span>
+            </p></a
+          >
         </div>
       </div>
     </div>
