@@ -40,7 +40,7 @@ onBeforeUnmount(() => {
     >
       <div class="logo">
         <img
-          class="xl:w-28 h-20 text-left"
+          class=" h-20 text-left"
           src="../assets/logo.png"
           alt="wacren"
         />

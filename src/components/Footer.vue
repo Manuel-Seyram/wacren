@@ -6,7 +6,7 @@
       >
         <div>
           <img
-            class="xl:w-28 h-20 text-left"
+            class="xl:w-44 w-40 xl:h-20 text-left"
             src="../assets/logo.png"
             alt="logo"
           />
